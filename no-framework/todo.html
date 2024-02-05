@@ -179,7 +179,10 @@
                       <article class="message is-primary">
                         <div class="message-header">
                           <p>Make a github account</p>
-                          <button class="delete" aria-label="delete"></button>
+                          <div>
+                            <button class="delete" aria-label="delete"></button>
+                          </div>
+                          
                         </div>
                         <div class="message-body">
                           <p>Go to <a href="https://github.com">github.com</a> and create an account.</p>
@@ -324,6 +327,13 @@
           </div>
 
       </div>
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        $(function() {
+          $('.delete').click(function(){
+            $(this).closest('.message').slideUp();
+          })
+        })
+      </script>
 </body>
 </html>

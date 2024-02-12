@@ -1,0 +1,14 @@
+{
+  "name": "2024-spring",
+  "version": "1.0.0",
+  "description": "- Create another repo",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  }
+
+}

@@ -11,6 +11,8 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "bulma": "^0.9.4",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },

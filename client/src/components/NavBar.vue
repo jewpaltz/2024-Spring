@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+  import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -18,18 +18,18 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <RouterLink to="/" class="navbar-item">
         Home
-      </a>
+      </RouterLink>
 
-      <a class="navbar-item">
+      <RouterLink to="/documentation" class="navbar-item">
         Documentation
-      </a>
+      </RouterLink>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <RouterLink to="/about" class="navbar-link">
           More
-        </a>
+        </RouterLink>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">

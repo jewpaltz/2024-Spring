@@ -49,6 +49,7 @@ jobs:
           retention-days: 1
   # Deploy to GitHub Pages
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -67,7 +68,7 @@ jobs:
         with:
           # Upload entire repository
           path: 'dist'
-          
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

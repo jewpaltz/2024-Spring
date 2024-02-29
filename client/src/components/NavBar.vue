@@ -69,12 +69,8 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 
-    .router-link-exact-active {
-        border-bottom: 2px solid #00d1b2;
-    }
-
     .router-link-active {
-        background-color: aquamarine;
+        border-bottom: 2px solid #00d1b2;
     }
 
 </style>

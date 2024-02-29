@@ -25,6 +25,8 @@ jobs:
   #build vue app
   build:
     runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ env.BASE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2

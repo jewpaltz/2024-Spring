@@ -26,7 +26,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BASE_URL: ${{ env.BASE_URL }}
+      BASE_URL: ${{ vars.BASE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2

@@ -25,17 +25,14 @@ jobs:
 
   #build vue app
   build:
-    environment:
-      name: github-pages
     runs-on: ubuntu-latest
     env:
-      S_BASE_URL: ${{ secrets.S_BASE_URL }}
-      E_BASE_URL: ${{ vars.BASE_URL }}
-      L_BASE_URL: /2024-Spring/
-      VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
+      VITE_BASE_URL: /2024-Spring/
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -49,15 +46,13 @@ jobs:
         run: npm run build
         working-directory: ./client
 
-      - name: Echo
-        run: echo "S_BASE_URL=${S_BASE_URL} E_BASE_URL=$E_BASE_URL L_BASE_URL=${L_BASE_URL}" 
-
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
           name: dist
           path: client/dist
           retention-days: 1
+
   # Deploy to GitHub Pages
   deploy:
     needs: build
@@ -65,6 +60,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2

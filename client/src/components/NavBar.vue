@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 import { count, isOpen } from '@/viewModel/cart';
+import LoginBadge from './LoginBadge.vue';
 
 let isActive = ref(false);
 
@@ -76,14 +77,7 @@ function toggleCart() {
       </div>
 
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
+        <LoginBadge />
       </div>
     </div>
   </div>

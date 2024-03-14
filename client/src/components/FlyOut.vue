@@ -22,7 +22,7 @@ const props = defineProps<{
         border: 1px solid #ccc;
         box-shadow: -1px 0 5px 0 rgba(0,0,0,.5);
         z-index: 100;
-        transform: translateX(80%);
+        transform: translateX(90%);
         transition: transform 1s;
         padding: 1rem;
     }
